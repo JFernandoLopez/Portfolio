@@ -1,0 +1,35 @@
+@import 'bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-image: url('vn.jpg');
+    background-size: 100%;
+    background-color: #15000d;
+    color: rgba(250, 235, 215, 0.80);
+}
+
+::webkit-scrollbar {
+    width: 5px;
+  }
+  
+::webkit-scrollbar-thumb {
+background-color: #15000d
+}
+  
+::webkit-scrollbar-track {
+background-color: rgba(250, 235, 215, 0.80);
+}
+
+::webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+* {
+scrollbar-width: thin;
+scrollbar-color: #15000d rgba(250, 235, 215, 0.80);
+}
+
+*::-moz-scrollbar-thumb:hover {
+background-color: #15000d;
+}
