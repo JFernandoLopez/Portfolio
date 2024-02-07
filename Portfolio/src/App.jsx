@@ -30,7 +30,7 @@ export default function App(){
 
     useEffect(() => {
         Modal.setAppElement('#root');
-      }, []);
+    }, []);
 
     const customStyles = {
         overlay: {
@@ -44,8 +44,8 @@ export default function App(){
             maxWidth: '100%',
             margin: 'auto',
             maxHeight: '100%',
-          },
-      };
+        },
+    };
 
     return (
     <div id='root' className='d-flex m-4 p-4 '>
@@ -170,13 +170,13 @@ export default function App(){
                 </div>
 
                     <Modal
-                     isOpen={modalOpen}
-                     onRequestClose={modalSelect}
-                     contentLabel='Image Modal'
-                     appElement={document.getElementById('root')}
-                     style={customStyles}
-                     >
-                     {selectedImage && (
+                        isOpen={modalOpen}
+                        onRequestClose={modalSelect}
+                        contentLabel='Image Modal'
+                        appElement={document.getElementById('root')}
+                        style={customStyles}
+                        >
+                        {selectedImage && (
                         <div className='containter inline-text text-end'>
                             <button onClick={modalSelect} className='m-2 btn btn-outline-danger fixed-top '>Cerrar</button>
                             <div id='carouselZoom' className="carousel slide my-5">
@@ -201,7 +201,7 @@ export default function App(){
                             </button>}
                             </div>
                         </div>
-                     )}
+                    )}
                     </Modal>
                 </div>
         <div className='container d-flex flex-wrap my-5 py-5' id='AboutMe'>

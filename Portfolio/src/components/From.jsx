@@ -31,16 +31,16 @@ export default function Form(){
         
         toast.success('Message is on way', {
             style: {
-              border: '1px solid #3ccd00',
-              padding: '16px',
-              color: '#fffaee',
-              backgroundColor: '#15000d'
+                border: '1px solid #3ccd00',
+                padding: '16px',
+                color: '#fffaee',
+                backgroundColor: '#15000d'
             },
             iconTheme: {
-              primary: '#fffaee',
-              secondary: '#3ccd00',
+                primary: '#fffaee',
+                secondary: '#3ccd00',
             },
-          });
+        });
     }
 
     const handleChange = (event) => {
@@ -76,8 +76,7 @@ export default function Form(){
         </form>
         <Toaster
         position="top-left"
-        reverseOrder={false}
-      />
+        reverseOrder={false}/>
         </div>
         
 )
