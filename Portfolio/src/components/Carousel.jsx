@@ -23,6 +23,7 @@ export default function Carousel({ id, array, openModal, modalOpen }){
             <>
               <button
                 className="carousel-control-prev"
+                style={{background: 'rgba(0, 0, 0, 0.4)'}}
                 type="button"
                 data-bs-target={`#${id}`}
                 data-bs-slide="prev"
@@ -32,6 +33,7 @@ export default function Carousel({ id, array, openModal, modalOpen }){
               </button>
               <button
                 className="carousel-control-next"
+                style={{background: 'rgba(0, 0, 0, 0.4)'}}
                 type="button"
                 data-bs-target={`#${id}`}
                 data-bs-slide="next"

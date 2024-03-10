@@ -1,9 +1,9 @@
-import './scss/styles.scss'
-import * as bootstrap from 'bootstrap'
 import React, {useState, useEffect} from 'react'
 import Modal from 'react-modal'
 import Carousel from './components/Carousel'
 import OffCanva from './components/OffCanva'
+import * as bootstrap from 'bootstrap'
+import './scss/styles.scss'
 
 export default function App(){
     const imageTechnook = ['landingTechnook.png', "Login.png", "MyInfo.png", "shoppingCart.png", "BeforePay.png", "MercadoPago.png", "AdminPanel.png", "Stadistics.png", "Stadistics2.png", "Stadistics3.png"]
@@ -79,7 +79,7 @@ export default function App(){
                 </tr>
                 <tr>
                 <td className='text-center badge text-bg-light mx-5 my-1'><img src='react-2.svg' alt='React' width='40px'/></td>
-                <td className='text-center badge text-bg-light mx-5 my-1'><img src='vitejs.svg' alt='Vite' width='40px'/></td>
+                <td className='text-center badge text-bg-light mx-5 my-1'><img src='TS.svg' alt='TypeScript' width='40px'/></td>
                 </tr>
                 <tr>
                 <td className='text-center badge text-bg-light mx-5 my-1'><img src='next-js.svg' alt='Next.js' width='40px'/></td>
@@ -90,7 +90,7 @@ export default function App(){
                 <td className='text-center badge text-bg-light mx-5 my-1'><img src='bootstrap-5.svg' alt='Bootstrap' width='60px'/></td>
                 </tr>
                 <tr>
-                <td className='text-center badge text-bg-light mx-5 my-1'><img src='auth0.svg' alt='Auth0' width='40px'/></td>
+                <td className='text-center badge text-bg-light mx-5 my-1'><img src='vitejs.svg' alt='Vite' width='40px'/></td>
                 <td className='text-center badge text-bg-light mx-5 my-1'><img src='jest-2.svg' alt='Jest' width='40px'/></td>
                 </tr>
                 </tbody>
@@ -103,50 +103,74 @@ export default function App(){
         </div>
         <div className='my-5 py-5' id='Experience'>
             <h3 className="my-3 py-3 display-5">Experience</h3>
-            <table className='my-2 py-2'>
-                <tbody>
-                <tr className='my-3' style={{border: 'solid'}}>
-                <td className='my-3 p-3'><h4 className='text-center'>Henry</h4 ><p className='text-center'>November 2023 - Today</p></td>
-                <td className='my-3 p-3'><ul>
-                    <li>Integration of the Auth0 library for third-party authentication.</li>
-                    <li>Development of HTTP request microservices interacting with thedatabase through CRUD operations using an ORM.</li>
-                    <li>Implementation of conditional rendering logic on the frontend based on the type of authenticated user.</li>
-                    <li>Dynamic application of styles to components and pages, adapted tospecific system conditions.</li>
-                    <li>Information caching.Form validation and development.</li>
-                    <li>User banning within the application environment.</li>
-                    <li>Logical deletion in the database for products and users.</li>
-                    <li>Route protection.</li>
-                    <li>Design of a single Landing application.</li>
-                    <li>Consumption of a public API on the backend to perform queries based on identifiers or other attributes associated with each artifact.</li>
-                    <li>Implementation of card pagination on Landing Page.</li>
-                    <li>Implementation of a Navigate Bar with a search bar that consumes a search service in a public API and the database simultaneously.</li>
-                    <li>Implementation of routes for rendering different components.</li>
-                    <li>Form validation and development.</li> 
-                    <li>Implementation of a relational database.</li>
-                    <li>Implementation of Redux with concurrent processes that interact directly with microservices on the backend.</li>
-                    <li>Artifact filters in the Navigate Bar.</li>                             
-                    </ul></td>
-                </tr>
-                <tr className='my-3' style={{border: 'solid'}}>
-                <td className='my-3 p-3'><h4 className='text-center'>BBM Advance</h4><p>February 2022 - August 2023</p></td>
-                <td className='my-3 p-3'><ul>
-                    <li>Project to implement an agile methodology in a waste treatment company.</li>
-                    <li>Design of a security system based on DuPont's STOP program to prevent accidents.</li>
-                    <li>Participation in ISO 14001 certification and two ISO 9001 certifications for two plants.</li>
-                    <li>Optimization of incineration equipment.</li>
-                    <li>Annual budget of a company: Expenses, sales (by site and by service), and costs.</li>
-                    </ul></td>
-                </tr>
-                <tr className='my-3' style={{border: 'solid'}}>
-                <td className='my-3 p-3'><h4 className='text-center'>CCIQS</h4><p>May 2019 - October 2019</p></td>
-                <td className='my-3 p-3'><ul>
-                    <li>Laboratory and research assistant in the Membrane Laboratory.</li>
-                    <li>Powder diffraction.</li>
-                    <li>Infrared spectroscopy.</li>
-                    </ul></td>
-                </tr>
-                </tbody>
-            </table>
+            <div className="accordion" id='experience'>
+                <div className='accordion-item' style={{background: 'rgba(0,0,0,0)'}}>
+                    <h2 className='accordion-header'>
+                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#henry' aria-expanded='true' aria-controls='henry' style={{background: 'transparent', color: 'white'}}>
+                        <h4 style={{paddingRight: '3rem'}}>Henry</h4>
+                        <p>November 2023 - Today</p>
+                        </button>
+                    </h2>
+                    <div id='henry' className='accordion-collapse collapse'>
+                        <div className='acordion-body'>
+                        <ul className='activites'>
+                            <li>Integration of the Auth0 library for third-party authentication.</li>
+                            <li>Development of HTTP request microservices interacting with thedatabase through CRUD operations using an ORM.</li>
+                            <li>Implementation of conditional rendering logic on the frontend based on the type of authenticated user.</li>
+                            <li>Dynamic application of styles to components and pages, adapted tospecific system conditions.</li>
+                            <li>Information caching.Form validation and development.</li>
+                            <li>User banning within the application environment.</li>
+                            <li>Logical deletion in the database for products and users.</li>
+                            <li>Route protection.</li>
+                            <li>Design of a single Landing application.</li>
+                            <li>Consumption of a public API on the backend to perform queries based on identifiers or other attributes associated with each artifact.</li>
+                            <li>Implementation of card pagination on Landing Page.</li>
+                            <li>Implementation of a Navigate Bar with a search bar that consumes a search service in a public API and the database simultaneously.</li>
+                            <li>Implementation of routes for rendering different components.</li>
+                            <li>Form validation and development.</li> 
+                            <li>Implementation of a relational database.</li>
+                            <li>Implementation of Redux with concurrent processes that interact directly with microservices on the backend.</li>
+                            <li>Artifact filters in the Navigate Bar.</li>                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className='accordion-item' style={{background: 'rgba(0,0,0,0)'}}>
+                    <h2 className='accordion-header'>
+                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#bbm' aria-expanded='true' aria-controls='bbm' style={{background: 'transparent', color: 'white'}}>
+                        <h4 style={{paddingRight: '1.8rem'}}>BBM Advance</h4><p>February 2022 - August 2023</p>
+                        </button>
+                    </h2>
+                    <div id='bbm' className='accordion-collapse collapse'>
+                        <div className='accordion-body'>
+                            <ul className='activites'>
+                            <li>Project to implement an agile methodology in a waste treatment company.</li>
+                            <li>Design of a security system based on DuPont's STOP program to prevent accidents.</li>
+                            <li>Participation in ISO 14001 certification and two ISO 9001 certifications for two plants.</li>
+                            <li>Optimization of incineration equipment.</li>
+                            <li>Annual budget of a company: Expenses, sales (by site and by service), and costs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className='accordion-item' style={{background: 'rgba(0,0,0,0)'}}>
+                    <h2 className='accordion-header'>
+                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#cciqs' aria-expanded='true' aria-controls='cciqs' style={{background: 'transparent', color: 'white'}}>
+                        <h4 style={{paddingRight: '3rem'}}>CCIQS</h4>
+                        <p>May 2019 - October 2019</p>
+                        </button>
+                    </h2>
+                    <div id='cciqs' className='accordion-collapse collapse'>
+                        <div className='accordion-body'>
+                            <ul className='activites'>
+                            <li>Laboratory and research assistant in the Membrane Laboratory.</li>
+                            <li>Powder diffraction.</li>
+                            <li>Infrared spectroscopy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div className='container d-flex flex-wrap my-5 py-5' id='Projects'>
                 <h3 className='display-5'>Projects</h3>
@@ -191,11 +215,11 @@ export default function App(){
                                 </div>
                             ))}
                             </div>
-                            {<button className="carousel-control-prev" type="button" data-bs-target='#carouselZoom' data-bs-slide="prev">
+                            {<button className="carousel-control-prev" type="button" data-bs-target='#carouselZoom' data-bs-slide="prev" style={{background: 'rgba(0, 0, 0, 0.4)'}}>
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span className="visually-hidden">Previous</span>
                             </button>}
-                            {<button className="carousel-control-next" type="button" data-bs-target='#carouselZoom' data-bs-slide="next">
+                            {<button className="carousel-control-next" type="button" data-bs-target='#carouselZoom' data-bs-slide="next" style={{background: 'rgba(0, 0, 0, 0.4)'}}>
                             <span className="carousel-control-next-icon" aria-hidden="true"></span>
                             <span className="visually-hidden">Next</span>
                             </button>}

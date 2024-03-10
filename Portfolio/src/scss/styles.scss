@@ -1,12 +1,13 @@
 @import 'bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
 
 body {
-    font-family: "Space Grotesk", sans-serif;
-    background-image: url('vn.jpg');
+    font-family: "Finger Paint", sans-serif;
+    background-image: url('blackboard.jpg');
     background-size: 100%;
-    background-color: #15000d;
-    color: rgba(250, 235, 215, 0.80);
+    background-color: #1b1b1b;
+    color: rgb(250, 235, 215);
+    padding-bottom: 5rem;
 }
 
 ::webkit-scrollbar {
@@ -14,7 +15,7 @@ body {
   }
   
 ::webkit-scrollbar-thumb {
-background-color: #15000d
+background-color: #1b1b1b;
 }
   
 ::webkit-scrollbar-track {
@@ -27,9 +28,26 @@ background-color: rgba(250, 235, 215, 0.80);
 
 * {
 scrollbar-width: thin;
-scrollbar-color: #15000d rgba(250, 235, 215, 0.80);
+scrollbar-color: #1b1b1b rgba(250, 235, 215, 0.80);
 }
 
 *::-moz-scrollbar-thumb:hover {
-background-color: #15000d;
+background-color: #1b1b1b;
+}
+
+ul.activites {
+  padding-top: 10px;
+  padding-left: 2rem;
+  list-style: none;
+}
+
+ul.activites li {
+  padding-left: 2rem;
+  background-image: url(noun-circle-91815.svg);
+  color: white;
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
