@@ -28,9 +28,7 @@ export default function App(){
         : setMyArray([...imagePokemon])
     },[modalOpen])
 
-    useEffect(() => {
-        Modal.setAppElement('#root');
-    }, []);
+    const appElement = React.useMemo(() => document.getElementById('root'), [])
 
     const customStyles = {
         overlay: {
@@ -52,14 +50,14 @@ export default function App(){
         {!modalOpen && (<div className='d-flex'>
         <OffCanva/>
         </div>)}
-        {!modalOpen && <nav className='navbar navbar-expand-lg bg-transparent fixed-top p-4 ml-auto' style={{width: 'fit-content', marginLeft: 'auto'}}>
+        {!modalOpen && <nav className='navbar navbar-expand-lg bg-transparent fixed-top p-4 ml-auto'>
             <div className='container-fluid'>
                 <ul className='navbar-nav ms-auto mb-2 mb-lg-0 list-group list-group-flush fs-5' >
-                <li className='nav-item list-group-item bg-transparent'><a /*style={{ backgroundColor:'#15000d'}}*/ className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#'>Start</a></li>
-                <li className='nav-item list-group-item bg-transparent'><a /*style={{ backgroundColor:'#15000d'}}*/ className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#Experience'>Experience</a></li>
-                <li className='nav-item list-group-item bg-transparent'><a /*style={{ backgroundColor:'#15000d'}}*/ className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#Projects'>Projects</a></li>
-                <li className='nav-item list-group-item bg-transparent'><a /*style={{ backgroundColor:'#15000d'}}*/ className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#AboutMe'>About Me</a></li>
-                <li className='nav-item list-group-item bg-transparent'><a /*style={{ backgroundColor:'#15000d'}}*/ className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Contact Me</a></li>
+                <li className='nav-item list-group-item bg-transparent'><a className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#'>Start</a></li>
+                <li className='nav-item list-group-item bg-transparent'><a className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#Experience'>Experience</a></li>
+                <li className='nav-item list-group-item bg-transparent'><a className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#Projects'>Projects</a></li>
+                <li className='nav-item list-group-item bg-transparent'><a className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' href='#AboutMe'>About Me</a></li>
+                <li className='nav-item list-group-item bg-transparent'><a className='navbar-link link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover shadow' data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Contact Me</a></li>
                 <li className='nav-item list-group-item bg-transparent'></li>
                 </ul>
             </div>
@@ -104,15 +102,16 @@ export default function App(){
         <div className='my-5 py-5' id='Experience'>
             <h3 className="my-3 py-3 display-5">Experience</h3>
             <div className="accordion" id='experience'>
-                <div className='accordion-item' style={{background: 'rgba(0,0,0,0)'}}>
+                <div className='accordion-item'>
                     <h2 className='accordion-header'>
-                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#henry' aria-expanded='true' aria-controls='henry' style={{background: 'transparent', color: 'white'}}>
-                        <h4 style={{paddingRight: '3rem'}}>Henry</h4>
+                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#henry' aria-expanded='true' aria-controls='henry' >
+                        <h4 className='henry'>Henry</h4>
                         <p>November 2023 - Today</p>
                         </button>
                     </h2>
                     <div id='henry' className='accordion-collapse collapse'>
-                        <div className='acordion-body'>
+                        <div className='accordion-body'>
+                        <p>Full Stack Developer</p>
                         <ul className='activites'>
                             <li>Integration of the Auth0 library for third-party authentication.</li>
                             <li>Development of HTTP request microservices interacting with thedatabase through CRUD operations using an ORM.</li>
@@ -135,14 +134,15 @@ export default function App(){
                         </div>
                     </div>
                 </div>
-                <div className='accordion-item' style={{background: 'rgba(0,0,0,0)'}}>
+                <div className='accordion-item'>
                     <h2 className='accordion-header'>
-                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#bbm' aria-expanded='true' aria-controls='bbm' style={{background: 'transparent', color: 'white'}}>
-                        <h4 style={{paddingRight: '1.8rem'}}>BBM Advance</h4><p>February 2022 - August 2023</p>
+                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#bbm' aria-expanded='true' aria-controls='bbm' >
+                        <h4 className= 'bbm'>BBM Advance</h4><p>February 2022 - August 2023</p>
                         </button>
                     </h2>
                     <div id='bbm' className='accordion-collapse collapse'>
                         <div className='accordion-body'>
+                            <p>Engineer Consultor Jr.</p>
                             <ul className='activites'>
                             <li>Project to implement an agile methodology in a waste treatment company.</li>
                             <li>Design of a security system based on DuPont's STOP program to prevent accidents.</li>
@@ -153,15 +153,16 @@ export default function App(){
                         </div>
                     </div>
                 </div>
-                <div className='accordion-item' style={{background: 'rgba(0,0,0,0)'}}>
+                <div className='accordion-item'>
                     <h2 className='accordion-header'>
-                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#cciqs' aria-expanded='true' aria-controls='cciqs' style={{background: 'transparent', color: 'white'}}>
+                        <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#cciqs' aria-expanded='true' aria-controls='cciqs' >
                         <h4 style={{paddingRight: '3rem'}}>CCIQS</h4>
                         <p>May 2019 - October 2019</p>
                         </button>
                     </h2>
                     <div id='cciqs' className='accordion-collapse collapse'>
                         <div className='accordion-body'>
+                            <p>Research intern</p>
                             <ul className='activites'>
                             <li>Laboratory and research assistant in the Membrane Laboratory.</li>
                             <li>Powder diffraction.</li>
@@ -179,7 +180,7 @@ export default function App(){
                     <div className='container d-flex flex-wrap'>
                     <p className='m-5 fs-5 mr-4 text-end mt-sm-0 mb-lg-5 text-sm-start' style={{ flex: '1' }}>Technology e-commerce with third authentication, shop car, mercado pago, stadistics dashboard, database connection, deploy, reviews, logic erase, bann, update-delete users and products.
                     </p>
-                    <div style={{ flex: '1' }}>
+                    <div className='TechnookCarousel' style={{ flex: '1' }}>
                     <Carousel id='carouselTechnook' array={imageTechnook} openModal={openModal} modalOpen={modalOpen}/>
                     </div>
                     </div>
@@ -187,7 +188,7 @@ export default function App(){
                     <div className='container d-flex flex-wrap'>
                     <p className='m-5 fs-5 mr-4 text-end mt-sm-0 mb-lg-5 text-sm-end' style={{ flex: '1' }}>Pokemon full stack application whose communicate with a public API, back end have API Rest, so is a searchig artefacts services with services that make posible create new artifacts with same structure like the API, front end has filters, a searchbar, a sepecification section for any pokemon (artifact)
                     </p>
-                    <div style={{ flex: '1' }}>
+                    <div className='PokemonCarrousel' style={{ flex: '1' }}>
                     <Carousel id='carouselPokemon' array={imagePokemon} openModal={openModal} modalOpen={modalOpen}/>
                     </div>
                     </div>
@@ -197,7 +198,7 @@ export default function App(){
                         isOpen={modalOpen}
                         onRequestClose={modalSelect}
                         contentLabel='Image Modal'
-                        appElement={document.getElementById('root')}
+                        appElement={appElement}
                         style={customStyles}
                         >
                         {selectedImage && (

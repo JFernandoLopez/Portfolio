@@ -45,9 +45,38 @@ ul.activites li {
   padding-left: 2rem;
   background-image: url(noun-circle-91815.svg);
   color: white;
-  background-position: 0 0;
+  background-position: 0 5px;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
   padding-bottom: 5px;
   padding-top: 5px;
+}
+
+div.accordion-body p {
+  padding: 5px;
+  color: white;
+}
+
+h2.accordion-header{
+  background: transparent;
+  button.accordion-button{
+    background: transparent;
+    color: white;
+    height: 75px;
+  }
+  h4.henry{
+    padding-right: 3rem;
+  }
+  h4.bbm{
+    padding-right: 1.8rem;
+  }
+}
+
+div.accordion-item{
+  background: transparent;
+}
+
+nav.navbar navbar-expand-lg bg-transparent fixed-top p-4 ml-auto{
+  width: fit-content;
+  margin-left: auto;  
 }
