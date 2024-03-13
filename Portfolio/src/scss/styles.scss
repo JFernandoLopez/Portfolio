@@ -3,7 +3,7 @@
 
 body {
     font-family: "Finger Paint", sans-serif;
-    background-image: url('blackboard.jpg');
+    background-image: url('../../public/blackboard.jpg');
     background-size: 100%;
     background-color: #1b1b1b;
     color: rgb(250, 235, 215);
@@ -43,7 +43,7 @@ ul.activites {
 
 ul.activites li {
   padding-left: 2rem;
-  background-image: url(noun-circle-91815.svg);
+  background-image: url('../../public/noun-circle-91815.svg');
   color: white;
   background-position: 0 5px;
   background-size: 1.6rem 1.6rem;
