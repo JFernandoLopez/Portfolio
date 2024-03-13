@@ -64,7 +64,11 @@ export default function App(){
         </nav>}
     <div className='container my-4 py-4'>
     <div className='container'>
-        <div className='row gutters-2 py-4 my-3'>
+        <div className='row gutters-2 py-4 my-3 px-5'>
+            <div className='col align-self-center' id='technologies'>
+                <h1 className='display-4 w-100 text-center'>Hello World!, I'm José Fernando López Bernal</h1>
+                <h5 className='fs-4 my-3 py-3 text-center'>Full Stack Developer with web development experience and a degree on Petrochemical Engineer by UAEMex "Universidad Autónoma del Estado de México"<br/><img src='Flag_of_Mexico.svg' alt='Mexican' width='25px'></img></h5>
+            </div> 
             <table className='col text-center p-5 table table-hover table-responsive'>
                 <tbody>
                 <tr>
@@ -93,11 +97,6 @@ export default function App(){
                 </tr>
                 </tbody>
             </table> 
-
-        <div className='col align-self-center' id='technologies'>
-            <h1 className='display-4 w-100 text-center'>Hello World!, I'm José Fernando López Bernal</h1>
-            <h5 className='fs-4 my-3 py-3 text-center'>Full Stack Developer with web development experience and a degree on Petrochemical Engineer by UAEMex "Universidad Autónoma del Estado de México"<br/><img src='Flag_of_Mexico.svg' alt='Mexican' width='25px'></img></h5>
-        </div> 
         </div>
         <div className='my-5 py-5' id='Experience'>
             <h3 className="my-3 py-3 display-5">Experience</h3>
